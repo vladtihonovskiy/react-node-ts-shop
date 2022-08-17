@@ -1,45 +1,41 @@
-import mongoose from "mongoose";
+import mongoose from 'mongoose';
 
 interface IProducts {
   title: string;
-  description: string
+  description: string;
   price: number;
-  image:  {
-    data: Buffer,
-    contentType: string,
-  }
-
+  image: {
+    data: Buffer;
+    contentType: string;
+  };
 }
 
 interface ProductDoc extends mongoose.Document, IProducts {}
 
 interface productModelInterface extends mongoose.Model<ProductDoc> {
-  build(attr: IProducts): ProductDoc
+  build(attr: IProducts): ProductDoc;
 }
 
 const productSchema = new mongoose.Schema({
   title: {
     type: String,
-    required: true
+    required: true,
   },
   description: {
     type: String,
-    required: true
+    required: true,
   },
   price: {
     type: Number,
-    required: true
+    required: true,
   },
-  image:
-    { data: Buffer,
-      contentType: String,
-    },
-})
+  image: { data: Buffer, contentType: String },
+});
 
 productSchema.statics.build = (attr: IProducts) => {
-  return new Product(attr)
-}
+  return new Product(attr);
+};
 
-const Product = mongoose.model<ProductDoc, productModelInterface>('Product', productSchema)
+const Product = mongoose.model<ProductDoc, productModelInterface>('Product', productSchema);
 
-export { Product }
+export { Product };
