@@ -1,5 +1,5 @@
-export interface IProduct {
-  _id: string;
+export default interface IProductCardItemProps {
+  id: string;
   title: string;
   description: string;
   price: number;

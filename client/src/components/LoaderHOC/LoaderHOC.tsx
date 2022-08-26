@@ -7,7 +7,11 @@ export const LoaderHOC: React.FC<ILoaderHOCProps> = ({
   children,
 }: ILoaderHOCProps) => {
   if (isLoading) {
-    return <CircularProgress />;
+    return (
+      <CircularProgress
+        sx={{ position: "absolute", textAlign: "center", left: "50%" }}
+      />
+    );
   }
   return children;
 };

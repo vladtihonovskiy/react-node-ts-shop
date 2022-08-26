@@ -5,7 +5,7 @@ interface IProducts {
   description: string;
   price: number;
   image: {
-    data: Buffer;
+    data: string;
     contentType: string;
   };
 }
@@ -29,7 +29,7 @@ const productSchema = new mongoose.Schema({
     type: Number,
     required: true,
   },
-  image: { data: Buffer, contentType: String },
+  image: { data: String, contentType: String },
 });
 
 productSchema.statics.build = (attr: IProducts) => {

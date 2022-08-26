@@ -13,19 +13,6 @@ interface IAppProps {
 }
 
 const App: FC<IAppProps> = ({ children }: IAppProps) => {
-  // const { isLoading } = useUserAuthState();
-  //
-  // useReduxChangeListener();
-  // useFBChangeListener();
-  //
-  // if (isLoading) {
-  //   return (
-  //     <div className="loaderContainer">
-  //       <LoaderSpinner />
-  //     </div>
-  //   );
-  // }
-
   return <>{children}</>;
 };
 
