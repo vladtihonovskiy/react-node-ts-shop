@@ -41,9 +41,7 @@ export const productsApi = createApi({
           productsApi.util.updateQueryData(
             "getAllProducts",
             undefined,
-            (productsDraft) => {
-              return [...productsDraft, { ...result.data.item }];
-            }
+            (productsDraft) => [...productsDraft, { ...result.data.item }]
           )
         );
 

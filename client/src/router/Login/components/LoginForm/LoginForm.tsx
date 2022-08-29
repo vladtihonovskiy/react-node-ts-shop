@@ -20,7 +20,7 @@ export const LoginForm: React.FC = () => {
           error={!!errors.email}
           sx={{ width: "100%", marginBottom: 5 }}
           label="Email"
-          type={"Email"}
+          type="Email"
         />
         <FormErrorMessage text={errors.email?.message as unknown as string} />
         <TextField
@@ -28,13 +28,13 @@ export const LoginForm: React.FC = () => {
           error={!!errors.password}
           sx={{ width: "100%" }}
           label="Password"
-          type={"Password"}
+          type="Password"
         />
         <FormErrorMessage
           text={errors.password?.message as unknown as string}
         />
         <FormErrorMessage text={requestError} />
-        <Button sx={{ marginTop: 2 }} type={"submit"}>
+        <Button sx={{ marginTop: 2 }} type="submit">
           Login
         </Button>
       </Grid>

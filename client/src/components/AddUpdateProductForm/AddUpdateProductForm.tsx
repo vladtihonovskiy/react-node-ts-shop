@@ -36,7 +36,7 @@ export const AddUpdateProductForm: React.FC<IAddUpdateProductFormProps> = ({
           error={!!errors.title}
           sx={{ width: "100%", marginBottom: 2 }}
           label="Title"
-          type={"Title"}
+          type="Title"
           defaultValue={defaultInputValue?.title}
         />
         <FormErrorMessage text={errors.title?.message as unknown as string} />
@@ -46,7 +46,7 @@ export const AddUpdateProductForm: React.FC<IAddUpdateProductFormProps> = ({
           sx={{ width: "100%", marginBottom: 2 }}
           label="Description"
           defaultValue={defaultInputValue?.description}
-          type={"text"}
+          type="text"
         />
         <FormErrorMessage
           text={errors.description?.message as unknown as string}
@@ -57,17 +57,13 @@ export const AddUpdateProductForm: React.FC<IAddUpdateProductFormProps> = ({
           sx={{ width: "100%", marginBottom: 2 }}
           label="Price"
           defaultValue={defaultInputValue?.price}
-          type={"number"}
+          type="number"
         />
         <FormErrorMessage text={errors.price?.message as unknown as string} />
         <FormErrorMessage text={requestError} />
         <Dropzone saveFiles={setFilesArray} />
         <FormErrorMessage text={errors.file?.message as unknown as string} />
-        <LoadingButton
-          loading={isUpdating}
-          sx={{ marginTop: 2 }}
-          type={"submit"}
-        >
+        <LoadingButton loading={isUpdating} sx={{ marginTop: 2 }} type="submit">
           Add
         </LoadingButton>
       </Grid>

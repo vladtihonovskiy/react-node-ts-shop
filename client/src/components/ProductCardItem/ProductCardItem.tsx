@@ -8,10 +8,11 @@ import {
   CardMedia,
   Typography,
 } from "@mui/material";
+import LoadingButton from "@mui/lab/LoadingButton";
 import IProductCardItemProps from "./ProductCardItem.types";
 import { useDeletePostMutation } from "../../redux/products/products.api";
-import LoadingButton from "@mui/lab/LoadingButton";
 import history from "../../router/history";
+
 const base64templateString = "data:image/png;base64,";
 
 export const ProductCardItem: React.FC<IProductCardItemProps> = ({
@@ -35,7 +36,7 @@ export const ProductCardItem: React.FC<IProductCardItemProps> = ({
   return (
     <Card sx={{ maxWidth: 380, m: 3, width: "100%" }}>
       <CardHeader
-        m={2} //margin
+        m={2} // margin
         title={title}
       />
       <CardMedia
@@ -51,21 +52,21 @@ export const ProductCardItem: React.FC<IProductCardItemProps> = ({
         </Typography>
       </CardContent>
       <Box
-        m={2} //margin
+        m={2} // margin
         display="flex"
         justifyContent="space-between"
         alignItems="center"
       >
         <Typography variant="body1">price: {price}$</Typography>
         <Button size="large">Add to card</Button>
-        <Button onClick={onUpdateClick} color={"secondary"}>
+        <Button onClick={onUpdateClick} color="secondary">
           Update
         </Button>
         <LoadingButton
           onClick={onDeleteClick}
           loading={isLoading}
-          size={"small"}
-          color={"error"}
+          size="small"
+          color="error"
         >
           Delete
         </LoadingButton>

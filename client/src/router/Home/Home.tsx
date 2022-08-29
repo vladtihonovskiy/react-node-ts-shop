@@ -10,13 +10,13 @@ const Home = () => {
   console.log("products", products);
 
   return (
-    <Container sx={{ minHeight: "100vh" }} maxWidth={"xl"}>
+    <Container sx={{ minHeight: "100vh" }} maxWidth="xl">
       <Grid
         container
         direction="row"
         alignItems="flex-start"
-        justifyContent={"center"}
-        flexWrap={"wrap"}
+        justifyContent="center"
+        flexWrap="wrap"
         sx={{ height: "100%", paddingTop: 5 }}
       >
         <LoaderHOC isLoading={isLoading}>

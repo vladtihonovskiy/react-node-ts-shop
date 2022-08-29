@@ -12,8 +12,6 @@ interface IAppProps {
   children: ReactNode;
 }
 
-const App: FC<IAppProps> = ({ children }: IAppProps) => {
-  return <>{children}</>;
-};
+const App: FC<IAppProps> = ({ children }: IAppProps) => <>{children}</>;
 
 export default App;
